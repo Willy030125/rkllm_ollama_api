@@ -7,6 +7,7 @@
 ## Support Platform
 - RK3588 Series
 - RK3576 Series
+- RKNPU Driver Version: v0.9.8
 
 ## 使用
 ```bash
@@ -50,3 +51,4 @@ uv run client.py
 
 ## 模型
 请参照[rkllm_model_zoo](https://github.com/airockchip/rknn-llm/tree/main#download)
+注意，旧版本的rkllm模型在新版本的rkllm推理时会出现错误，比如无限循环

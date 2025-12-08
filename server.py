@@ -82,7 +82,7 @@ def show_models():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--rkllm_model_path', type=str, default="models/qwen3-vl-2b-instruct_w8a8_rk3588.rkllm", help='Absolute path of the converted RKLLM model on the Linux board;')
+    parser.add_argument('--rkllm_model_path', type=str, default="models/qwen3-vl-2b-instruct_w8a8_rk3588.rkllm", help='Path of the converted RKLLM model on the Linux board;')
     parser.add_argument('--target_platform', type=str, default="rk3588", help='Target platform: e.g., rk3588/rk3576;')
     parser.add_argument('--lora_model_path', type=str, help='Absolute path of the lora_model on the Linux board;')
     parser.add_argument('--prompt_cache_path', type=str, help='Absolute path of the prompt_cache file on the Linux board;')
