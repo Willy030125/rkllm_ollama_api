@@ -1,10 +1,9 @@
 services:
   rkllm-server:
     image: dukihiroi/rkllm-server:latest
-    build: 
-      context: .
-      dockerfile: Dockerfile
-      no-cache: true
+    # build: 
+    #   context: .
+    #   dockerfile: Dockerfile
     container_name: rkllm-server
     restart: unless-stopped
     

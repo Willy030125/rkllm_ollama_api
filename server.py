@@ -91,14 +91,16 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    if not os.path.exists(args.rkllm_model_path):
-        print("Error: Please provide the correct rkllm model path, and ensure it is the absolute path on the board.")
-        sys.stdout.flush()
-        exit()
+    
     if args.isDocker.lower() == 'y':
         rkllm_model_path = "/app/models/" + os.path.basename(args.rkllm_model_path)
     else:
         rkllm_model_path = args.rkllm_model_path
+
+    if not os.path.exists(rkllm_model_path):
+        print("Error: Please provide the correct rkllm model path, and ensure it is the absolute path on the board.")
+        sys.stdout.flush()
+        exit()
     global_model = rkllm_model_path
 
     if not (args.target_platform in ["rk3588", "rk3576"]):

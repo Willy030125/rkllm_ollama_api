@@ -6,6 +6,7 @@ FROM python:3.12-slim
 RUN apt-get update && apt-get install -y \
     curl \
     git \
+    libgomp1 \
     && rm -rf /var/lib/apt/lists/*
 
 # 2. 安装 uv 包管理器
@@ -36,11 +37,9 @@ ENV TARGET_PLATFORM=rk3588
 EXPOSE 8080
 
 # 7. 启动命令
-CMD echo "Contents of /app/lib for debugging:"
-CMD ls /app/lib
 CMD echo "Starting RKLLM server with model path: $RKLLM_MODEL_PATH and target platform: $TARGET_PLATFORM"
-# CMD uv run server.py \
-#     --rkllm_model_path "$RKLLM_MODEL_PATH" \
-#     --target_platform "$TARGET_PLATFORM" \
-#     --port 8080 \
-#     --isDocker y
+CMD uv run server.py \
+    --rkllm_model_path "$RKLLM_MODEL_PATH" \
+    --target_platform "$TARGET_PLATFORM" \
+    --port 8080 \
+    --isDocker y
