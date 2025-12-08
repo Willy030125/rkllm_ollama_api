@@ -318,7 +318,7 @@ import threading
 import time
 # Retrieve the output from the RKLLM model and print it in a streaming manner
 def get_RKLLM_output(rkllm_model, chat_formatted):
-    print("history in get_RKLLM_output: ", chat_formatted)
+    # print("history in get_RKLLM_output: ", chat_formatted)
     global global_text, global_state
     global_text = []
     global_state = -1
