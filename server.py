@@ -81,15 +81,14 @@ def show_models():
     }]})
     return Response(info, content_type="application/json")
 
-@app.route("/test", methods=['GET'])
+@app.route("/hello", methods=['GET'])
 def test():
-    user_message = "Introduce yourself."
+    user_message = "Hello!"
     messages = [{'role':'user','content':user_message}]
     messages_formatted = apply_chat_template(messages)
     results = get_RKLLM_output(rkllm_model, messages_formatted)
     def stream_generator():
         for r in results:
-            # print("streaming chunk: ", r)
             yield r
         yield '\n'
     return Response(stream_generator(), mimetype='text/event-stream')

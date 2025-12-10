@@ -40,7 +40,7 @@ docker compose up -d
 
 # test
 # Change the ip and port if needed
-curl -N http://localhost:8080/test
+curl -N http://localhost:8080/hello
 ```
 
 ## Usage
