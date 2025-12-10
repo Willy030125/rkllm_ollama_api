@@ -12,7 +12,7 @@ services:
       - /dev:/dev
 
       # The models directory should contain the model file to be used
-      - ./models:/app/models
+      - ./models:/rkllm_server/models
 
     environment:
       # Set the target platform (e.g., rk3566, rk3588)
