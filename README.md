@@ -1,7 +1,7 @@
 # rkllm openai like api server
 
 ## Introduction
-An RKLLM server implementation compatible with the OpenAI API format.
+An RKLLM server implementation compatible with the Ollama (with Ollama-python) and OpenAI API format.
 
 ## Supported Platforms
 - RK3588 Series
