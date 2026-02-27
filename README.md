@@ -46,7 +46,7 @@ curl -N http://localhost:8080/hello
 ## Usage
 ```bash
 git clone https://github.com/Willy030125/rkllm_ollama_api.git
-cd rkllm_openai_like_api
+cd rkllm_ollama_api
 ````
 
 Add the required dynamic libraries:
@@ -58,7 +58,7 @@ sudo cp lib/*.so /usr/lib
 Install uv:
 
 ```bash
-curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 Sync dependencies:
